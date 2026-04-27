@@ -820,8 +820,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTowers:
-  - {fileID: 11400000, guid: f5efbc6c065798440a8ea1a5942a5106, type: 2}
-  - {fileID: 11400000, guid: b3fbf9109aee06c4b893b700189f3bba, type: 2}
+  - {fileID: 11400000, guid: 3d934755b0c23d447ba2f32abbacb121, type: 2}
+  - {fileID: 11400000, guid: e5dd4ef181e10034cbbd74cecce35e4f, type: 2}
+  - {fileID: 11400000, guid: 2ba7031dd23e4b649a6b8a9d3562c253, type: 2}
+  - {fileID: 11400000, guid: 2fd4235409978474da1a7a053988fb52, type: 2}
+  - {fileID: 11400000, guid: 88e07869b8c16564c87d58d0693dd799, type: 2}
   numOfColumns: 5
   visibleIcons: 5
   spinTimeCurve:

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f73b22d452073749b7a41c521445aa5, type: 3}
-  m_Name: TestIcon1
+  m_Name: Ant
   m_EditorClassIdentifier: 
   sprite: {fileID: 111553286, guid: 5a42af013d00a054d8cb2af7b19886b9, type: 3}
   countInColumn: 0700000007000000070000000700000007000000

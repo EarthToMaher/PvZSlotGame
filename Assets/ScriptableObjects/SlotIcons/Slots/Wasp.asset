@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f73b22d452073749b7a41c521445aa5, type: 3}
-  m_Name: TestIcon1
+  m_Name: Wasp
   m_EditorClassIdentifier: 
-  sprite: {fileID: 111553286, guid: 5a42af013d00a054d8cb2af7b19886b9, type: 3}
-  countInColumn: 0700000007000000070000000700000007000000
+  sprite: {fileID: 1518414632, guid: 0f343d651f32ea8489298a6086ff50a4, type: 3}
+  countInColumn: 0500000005000000050000000500000005000000
   outcomes:
   - {fileID: 11400000, guid: f3d1e97f14141d64c833e8ff4638cf56, type: 2}
   - {fileID: 11400000, guid: 036dd60633a45fd4697cb3c5bb574df2, type: 2}

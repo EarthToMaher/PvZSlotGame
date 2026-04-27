@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181e6fee8de88d24b981e601b8ed8ad9, type: 3}
+  m_Name: Bee
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 217425682, guid: b535f2ee16975594bad0d08be25d17bd, type: 3}
+  countInColumn: 5
