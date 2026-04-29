@@ -133,7 +133,7 @@ public class SlotMachineManager_SLOT : MonoBehaviour
         List<SlotMachineTower> symbols = new List<SlotMachineTower>(); //Temp List of Symbols to return
         for (int col = 0; col < outcome.outcome.Length; col++) //Iterates through each character of the pattern string. Always 5
         {
-            for (int row = 0; row < outcome.outcome[col].Length-1; row++) //Iterates through each element of the array
+            for (int row = 0; row < outcome.outcome[col].Length; row++) //Iterates through each element of the array
             {
                 if (outcome.outcome[col][row] == '1') 
                 {
