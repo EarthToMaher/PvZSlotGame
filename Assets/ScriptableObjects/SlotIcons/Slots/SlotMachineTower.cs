@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SlotMachineTower", menuName = "Scriptable Objects/SlotMachineTower")]
@@ -8,5 +7,4 @@ public class SlotMachineTower : ScriptableObject
     [Tooltip("Array containing how many are in each column")] public int[] countInColumn;
     public SlotOutcome[] outcomes;
     public int multiplier;
-    public AnimatorController anim;
 }

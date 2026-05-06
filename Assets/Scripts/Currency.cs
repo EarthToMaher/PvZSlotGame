@@ -43,7 +43,7 @@ public class Currency : MonoBehaviour
         {
             startingCurrency += scaling;
             UpdateUI(startingCurrency);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForEndOfFrame();
         }
     }
 }
