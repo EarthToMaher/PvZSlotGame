@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.Rendering;
+using UnityEditor.Animations;
 public class ReelTape_SLOT : MonoBehaviour
 {
         private SlotMachineTower[] reelTapeIcons;
@@ -88,6 +89,9 @@ public class ReelTape_SLOT : MonoBehaviour
                 //reelIcon.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f,1);
                 reelIcon.transform.SetParent(column,false);
                 reelIcon.GetComponent<Image>().sprite = reelTapeOrder.Peek().sprite;
+                Animator animator = reelIcon.AddComponent<Animator>();
+                animator.enabled = false;
+                animator.runtimeAnimatorController = reelTapeOrder.Peek().anim;
                 reelTapeOrder.Enqueue(reelTapeOrder.Dequeue());
                 reelTapeTransforms.Enqueue(reelIcon.GetComponent<RectTransform>());
                 float yPos = currentSlot* -176;
