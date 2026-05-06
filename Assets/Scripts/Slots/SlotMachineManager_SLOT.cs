@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class SlotMachineManager_SLOT : MonoBehaviour
@@ -44,6 +45,7 @@ public class SlotMachineManager_SLOT : MonoBehaviour
     private ReelTape_SLOT[] reelTapes;
 
     private int fullTapeLength;
+    public RectTransform[][] goResults;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -99,7 +101,6 @@ public class SlotMachineManager_SLOT : MonoBehaviour
     public void AddToResults(SlotMachineTower[] results)
     {
         finalResults[count] = results;
-        count++;
         if (count == numOfColumns)
         {
             string result = "Final- ";
@@ -116,6 +117,13 @@ public class SlotMachineManager_SLOT : MonoBehaviour
             CheckPayouts();
         }
     }
+
+        public void AddToGOResults(RectTransform[] results)
+    {
+        goResults[count] = results;
+        count++;
+    }
+
 
     public void CheckPayouts()
     {
@@ -145,9 +153,19 @@ public class SlotMachineManager_SLOT : MonoBehaviour
         return symbols;
     }
 
-    public void AnimatePayline()
+    public void AnimatePayline(RectTransform[][] grid, SlotOutcome outcome, int offset)
     {
-        
+        List<SlotMachineTower> symbols = new List<SlotMachineTower>(); //Temp List of Symbols to return
+        for (int col = 0; col < outcome.outcome.Length; col++) //Iterates through each character of the pattern string. Always 5
+        {
+            for (int row = 0; row < outcome.outcome[col].Length; row++) //Iterates through each element of the array
+            {
+                if (outcome.outcome[col][row] == '1') 
+                {
+                    grid[row][col+offset].GetComponent<Animator>().enabled = true;
+                }
+            }
+        }
     }
 
 
@@ -164,6 +182,8 @@ public class SlotMachineManager_SLOT : MonoBehaviour
             }
             if(notFound) continue; //If we failed to find it, continue through the for loop
             DrawPayline(towerType,outcome,i);
+            AnimatePayline(goResults,outcome,i);
+
             
         }
 
