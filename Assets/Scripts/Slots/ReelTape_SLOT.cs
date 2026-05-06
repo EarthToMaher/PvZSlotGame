@@ -171,6 +171,7 @@ public class ReelTape_SLOT : MonoBehaviour
         int count = 0;
         for (int i = 0; i < 5; i++)
         {
+             finalOutcomes[i].gameObject.active=true;
             float targetY =176*i;
             if (targetY < finalOutcomes[i].anchoredPosition.y)
             {
@@ -209,6 +210,8 @@ public class ReelTape_SLOT : MonoBehaviour
          while (index < 6)
             {
                 RectTransform thisTransform = reelTapeTransforms.Peek();
+                if(index==0) thisTransform.gameObject.active = false;
+                else thisTransform.gameObject.active = true;
                 float newYPos = thisTransform.anchoredPosition.y - 60f;
                 thisTransform.anchoredPosition = new Vector2(0,newYPos);
                 reelTapeTransforms.Enqueue(reelTapeTransforms.Dequeue());
@@ -216,6 +219,7 @@ public class ReelTape_SLOT : MonoBehaviour
             }
             while (index < reelTapeTransforms.Count)
             {
+                reelTapeTransforms.Peek().gameObject.active=false;
                 reelTapeTransforms.Enqueue(reelTapeTransforms.Dequeue());
                 index++;
             }
@@ -223,7 +227,7 @@ public class ReelTape_SLOT : MonoBehaviour
             if (reelTapeTransforms.Peek().anchoredPosition.y <= -880)
             {
                 RectTransform ourTransform = reelTapeTransforms.Dequeue();
-                ourTransform.anchoredPosition = new Vector2(0,200);
+                ourTransform.anchoredPosition = new Vector2(0,176);
                 reelTapeTransforms.Enqueue(ourTransform);
 
             }

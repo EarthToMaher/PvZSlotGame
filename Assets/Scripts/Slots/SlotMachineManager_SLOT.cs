@@ -145,6 +145,11 @@ public class SlotMachineManager_SLOT : MonoBehaviour
         return symbols;
     }
 
+    public void AnimatePayline()
+    {
+        
+    }
+
 
     void CheckPayline(SlotMachineTower towerType, SlotMachineTower[][] grid, SlotOutcome outcome)
     {
