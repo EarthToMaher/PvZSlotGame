@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dung
   m_EditorClassIdentifier: 
   sprite: {fileID: 400649986, guid: eb55a23851ac9974ab48b441b46dbe7a, type: 3}
-  countInColumn: 0300000003000000030000000300000003000000
+  countInColumn: 0400000004000000040000000400000004000000
   outcomes:
   - {fileID: 11400000, guid: f3d1e97f14141d64c833e8ff4638cf56, type: 2}
   - {fileID: 11400000, guid: 036dd60633a45fd4697cb3c5bb574df2, type: 2}
@@ -22,3 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c983757b5b798ba4da73329231ebfe5c, type: 2}
   - {fileID: 11400000, guid: a3b8ee4ad5f8c9d4e9c96ce8a2bc0a29, type: 2}
   - {fileID: 11400000, guid: 0090053b53f83bd45b603e0e43dca5a6, type: 2}
+  multiplier: 5

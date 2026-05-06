@@ -92,8 +92,15 @@ public class ReelTape_SLOT : MonoBehaviour
                 reelTapeTransforms.Enqueue(reelIcon.GetComponent<RectTransform>());
                 float yPos = currentSlot* -176;
                 currentSlot--;
-                if(currentSlot > -2) reelIcon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,yPos);
-                else reelIcon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,176);
+                if(currentSlot > -2)
+            {
+                reelIcon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,yPos);
+
+            } 
+                else{
+                     reelIcon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,176);
+                     
+                }
                 index--;
             }
         }
@@ -110,6 +117,7 @@ public class ReelTape_SLOT : MonoBehaviour
             }
             while (index < reelTapeTransforms.Count) //Continue cycling our queue for the elements we cannot see
             {
+                
                 reelTapeTransforms.Enqueue(reelTapeTransforms.Dequeue());
                 index++;
             }
@@ -117,7 +125,7 @@ public class ReelTape_SLOT : MonoBehaviour
             if (reelTapeTransforms.Peek().anchoredPosition.y <= -880) //If our final element is below what can be seen
             {
                 RectTransform ourTransform = reelTapeTransforms.Dequeue(); //Dequeue our last element (the one we cannot see)
-                ourTransform.anchoredPosition = new Vector2(0,200); //Reset it to the top
+                ourTransform.anchoredPosition = new Vector2(0,176); //Reset it to the top
                 reelTapeTransforms.Enqueue(ourTransform); //Requeue it to the back of the queue
 
             }
@@ -163,16 +171,16 @@ public class ReelTape_SLOT : MonoBehaviour
         int count = 0;
         for (int i = 0; i < 5; i++)
         {
-            float targetY = -200*i;
+            float targetY =176*i;
             if (targetY < finalOutcomes[i].anchoredPosition.y)
             {
-                float newYPos = Mathf.Clamp(finalOutcomes[i].anchoredPosition.y + slowdownSpipnSpeed,Mathf.NegativeInfinity,-200*i); //Calculate our new position
+                float newYPos = Mathf.Clamp(finalOutcomes[i].anchoredPosition.y + slowdownSpipnSpeed,Mathf.NegativeInfinity,-176*i); //Calculate our new position
                 finalOutcomes[i].anchoredPosition = new Vector2(0,newYPos); //Update our RectTransform
                 count++;
             }
             else if (targetY > finalOutcomes[i].anchoredPosition.y)
             {
-                float newYPos = Mathf.Clamp(finalOutcomes[i].anchoredPosition.y - slowdownSpipnSpeed,-200*i,Mathf.Infinity); //Calculate our new position
+                float newYPos = Mathf.Clamp(finalOutcomes[i].anchoredPosition.y - slowdownSpipnSpeed,-176*i,Mathf.Infinity); //Calculate our new position
                 finalOutcomes[i].anchoredPosition = new Vector2(0,newYPos); //Update our RectTransform
                 count++;
             }

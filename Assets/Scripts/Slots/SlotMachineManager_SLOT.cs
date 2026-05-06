@@ -22,7 +22,7 @@ public class SlotMachineManager_SLOT : MonoBehaviour
         PAYING
     }
 
-    private MachineStates state = MachineStates.IDLe;
+    public MachineStates state = MachineStates.IDLe;
 
     [Header("References")]
     public RectTransform columnPrefab;
@@ -167,6 +167,8 @@ public class SlotMachineManager_SLOT : MonoBehaviour
 
     void DrawPayline(SlotMachineTower tower, SlotOutcome outcome, int offset)
     {
+        int payout = outcome.multiplier * 10;
+        FindFirstObjectByType<Currency>().AddCurrency(payout);
         DebugPayline(tower, outcome, offset);
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wasp
   m_EditorClassIdentifier: 
   sprite: {fileID: 1518414632, guid: 0f343d651f32ea8489298a6086ff50a4, type: 3}
-  countInColumn: 0500000005000000050000000500000005000000
+  countInColumn: 0200000002000000020000000200000002000000
   outcomes:
   - {fileID: 11400000, guid: f3d1e97f14141d64c833e8ff4638cf56, type: 2}
   - {fileID: 11400000, guid: 036dd60633a45fd4697cb3c5bb574df2, type: 2}
@@ -22,3 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c983757b5b798ba4da73329231ebfe5c, type: 2}
   - {fileID: 11400000, guid: a3b8ee4ad5f8c9d4e9c96ce8a2bc0a29, type: 2}
   - {fileID: 11400000, guid: 0090053b53f83bd45b603e0e43dca5a6, type: 2}
+  multiplier: 10
