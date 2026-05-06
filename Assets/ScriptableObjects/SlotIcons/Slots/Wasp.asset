@@ -23,3 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a3b8ee4ad5f8c9d4e9c96ce8a2bc0a29, type: 2}
   - {fileID: 11400000, guid: 0090053b53f83bd45b603e0e43dca5a6, type: 2}
   multiplier: 10
+  anim: {fileID: 9100000, guid: 020b47c7cb8de3142b7fde6a116226ca, type: 2}
